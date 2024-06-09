@@ -4,7 +4,6 @@ function Headphones() {
   return (
     <div>
       <Header name={"Headphones"} />
-      <Hero />
       <Shop />
       <MainFooter />
     </div>

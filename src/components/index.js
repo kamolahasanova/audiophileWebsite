@@ -8,3 +8,4 @@ export { default as Like } from "./Like";
 export { default as Shop } from "./Shop";
 export { default as Navbar } from "./Navbar";
 export { default as Hero } from "./Hero";
+export { default as Headpage } from "./Headpage";
