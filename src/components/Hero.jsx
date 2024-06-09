@@ -13,7 +13,6 @@ function AddProduct() {
       <div className=" align-content flex flex-col  gap-16 my-20">
         {product &&
           product.map((headphones, id) => {
-            console.log(headphones);
             let { image, name, description, price } = headphones;
             const addtoBag = () => {
               let newObj = {

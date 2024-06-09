@@ -23,10 +23,14 @@ import {
   Speakers,
   SingleProduct,
   Cart,
+  Error,
 } from "./pages";
 // loaders
 import { loader as Homeloader } from "./pages/Home";
 import { loader as SingleProductLoader } from "./pages/SingleProduct";
+import { loader as SectionLoader } from "./components/Section";
+import { loader as HeadSectionLoader } from "./components/HeadSection";
+import { loader as SpeakerSectionLoader } from "./components/SpeakerSection";
 
 //actions
 import Login, { action as LoginAction } from "./pages/Login";
@@ -46,23 +50,28 @@ function App() {
           <MainLayout />
         </ProtectedRoutes>
       ),
+      errorElement: <Error />,
       children: [
         {
           index: true,
           element: <Home />,
+
           loader: Homeloader,
         },
         {
           path: "/headphones",
           element: <Headphones />,
+          loader: HeadSectionLoader,
         },
         {
           path: "/speakers",
           element: <Speakers />,
+          loader: SpeakerSectionLoader,
         },
         {
           path: "/earphones",
           element: <Earphones />,
+          loader: SectionLoader,
         },
         {
           path: "/products/:slug",
@@ -79,10 +88,13 @@ function App() {
       path: "/login",
       element: user ? <Navigate to="/" /> : <Login />,
       action: LoginAction,
+      errorElement: <Error />,
     },
     {
       path: "/signUp",
       element: user ? <Navigate to="/" /> : <SignUp />,
+      errorElement: <Error />,
+
       action: SignUpAction,
     },
   ]);

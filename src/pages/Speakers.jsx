@@ -1,9 +1,10 @@
-import { Header, Shop, MainFooter } from "../components";
+import { Header, Shop, MainFooter, SpeakerSection } from "../components";
 function Speakers() {
   return (
     <div>
       {" "}
       <Header name={"Speakers"} />
+      <SpeakerSection />
       <Shop />
       <MainFooter />
     </div>
