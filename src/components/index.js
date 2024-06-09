@@ -1,0 +1,10 @@
+export { default as MainFooter } from "./MainFooter";
+export { default as Features } from "./Features";
+export { default as Footer } from "./Footer";
+export { default as FormInput } from "./FormInput";
+export { default as Gallery } from "./Gallery";
+export { default as Header } from "./Header";
+export { default as Like } from "./Like";
+export { default as Shop } from "./Shop";
+export { default as Navbar } from "./Navbar";
+export { default as Hero } from "./Hero";
